@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <style>
-html{width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;background-color:black;color:aquamarine;transition:background-color 1.5s ease-out;}
+html{-webkit-overflow-scrolling:touch;width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;background-color:black;color:aquamarine;transition:background-color 1.5s ease-out;}
 *{font-family:"Arial",sans-serif;padding:0;margin:0;border:0;}
 #bg_hills{z-index:-1;width:100%;height:25%;background-color:mediumspringgreen;position:fixed;bottom:-25%;left:0;transition:bottom 750ms ease 750ms;}
 #bg_clouds{z-index:-1;width:100%;height:9.375%;background-color:lightcyan;opacity:0.5;position:fixed;top:-9.375%;left:0;transition:top 750ms ease 1250ms;}
@@ -8,7 +8,7 @@ html{width:100%;height:100%;position:fixed;top:0;left:0;right:0;bottom:0;backgro
 #title span{font-size:67.5%;}
 #start{font-size:10vh;text-align:center;width:100%;height:12.5%;background-color:white;position:absolute;bottom:-12.5%;left:0;transition:bottom 750ms ease 2250ms;}
 #content{width:inherit;height:inherit;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0);z-index:10;color:inherit;transition:right 0.5s,opacity 0.5s;opacity:1.0;}
-#game{width:100%;height:100%;position:absolute;top:0;left:100%;right:0;bottom:0;background-color:aquamarine;z-index:1;color:inherit;transition:left 0.5s,opacity 0.5s;opacity:1.0;}
+#game{overflow:auto;width:auto;height:auto;position:absolute;top:0;left:100%;right:0;bottom:0;background-color:aquamarine;z-index:1;color:inherit;transition:left 0.5s,opacity 0.5s;opacity:1.0;}
 /*lightseagreen*/
 </style>
 <script>
