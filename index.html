@@ -28,6 +28,7 @@ html{-webkit-overflow-scrolling:auto;background-color:black;}
 /*lightseagreen*/
 </style>
 <script>
+window.setTimeout(function(){
 var rand=Math.floor(Math.random()*6);
 this.rand=rand;
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://playcanv.as/index/6VrvavHu":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand==4)?"https://paperplanes.world":((rand==5)?"/ballz/":0))))));
@@ -37,6 +38,7 @@ document.getElementById("bg_hills").style.bottom=0;
 document.getElementById("bg_clouds").style.top=0;
 document.getElementById("title").style.top="12.5%";
 document.getElementById("start").style.bottom="50%";
+},0);
 function start(){
 document.body.style.overflowY="auto";
 document.body.style.backgroundColor="aquamarine";
