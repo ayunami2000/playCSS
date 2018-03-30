@@ -15,6 +15,8 @@ html{background-color:black;}
 </style>
 <script>
 window.onload=function(){
+document.body.addEventListener('scroll',function(e){e.preventDefault();},false);
+document.body.addEventListener('gesturechange',function(){});
 var rand=Math.floor(Math.random()*5);
 this.rand=rand;
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://flappybird.playcanvas.com":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand=4)?"https://paperplanes.world":0)))));//"/ballz/"
@@ -26,7 +28,7 @@ document.getElementById("title").style.top="12.5%";
 document.getElementById("start").style.bottom="50%";
 };
 function start(){
-document.documentElement.style.overflowY="auto";
+document.body.style.overflowY="auto";
 document.body.style.backgroundColor="aquamarine";
 document.getElementById("content").style.right="100%";
 document.getElementById("content").style.opacity="0.0";
