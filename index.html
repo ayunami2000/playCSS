@@ -50,12 +50,8 @@ if((window.rand!=2)||(window.rand!=4)){document.getElementById("game").style.hei
 document.getElementById("game").style.left=0;
 document.getElementById("game").style.opacity="1.0";
 document.getElementById("game").style.overflow="auto";
-var touchEvents=['start', 'move', 'enter', 'leave', 'cancel'];
-for(var i=0,l=touchEvents.length;i<l;i++){
-  document.addEventLister('touch'+touchEvents[i],function(e){
-    e.preventDefault();
-    document.getElementById("game").document.elementFromPoint(e.pageX,e.pageY).dispatchEvent(e);}
-}
+var touchEvents=['start','move','enter','leave','cancel'];
+for(var i=0,l=touchEvents.length;i<l;i++){document.addEventListener('touch'+touchEvents[i],function(e){e.preventDefault();document.getElementById("game").document.elementFromPoint(e.pageX,e.pageY).dispatchEvent(e);}}
 };
 </script>
 </head>
