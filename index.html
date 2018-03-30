@@ -1,3 +1,7 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<title>Game.rand() - Play a random web game!</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <style>
 *:not(#start):not(#game):not(body):not(html){z-index:-1;pointer-events:none;-ms-touch-action:none;touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
@@ -14,8 +18,16 @@ html{-webkit-overflow-scrolling:auto;background-color:black;}
 #game{pointer-events:auto;touch-action:auto;transform-origin:top left;overflow:auto;width:auto;height:auto;min-width:100%;min-height:100%;position:absolute;top:0;left:100%;right:0;bottom:0;background-color:aquamarine;z-index:100;color:inherit;transition:left 0.5s,opacity 0.5s;opacity:1.0;}
 /*lightseagreen*/
 </style>
+</head>
+<body>
+<div id="bg_hills"></div>
+<div id="bg_clouds"></div>
+<div id="content">
+<div id="title">Game.rand()<br><span>Play a random web game!</span></div>
+<div id="start" onclick="start();">Start</div>
+</div>
+<iframe id="game">Loading...</iframe>
 <script>
-window.onload=function(){
 var rand=Math.floor(Math.random()*6);
 this.rand=rand;
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://playcanv.as/index/6VrvavHu":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand==4)?"https://paperplanes.world":((rand==5)?"/ballz/":0))))));
@@ -25,7 +37,6 @@ document.getElementById("bg_hills").style.bottom=0;
 document.getElementById("bg_clouds").style.top=0;
 document.getElementById("title").style.top="12.5%";
 document.getElementById("start").style.bottom="50%";
-};
 function start(){
 document.body.style.overflowY="auto";
 document.body.style.backgroundColor="aquamarine";
@@ -37,10 +48,5 @@ document.getElementById("game").style.opacity="1.0";
 document.getElementById("game").style.overflow="auto";
 };
 </script>
-<div id="bg_hills"></div>
-<div id="bg_clouds"></div>
-<div id="content">
-<div id="title">Game.rand()<br><span>Play a random web game!</span></div>
-<div id="start" onclick="start();">Start</div>
-</div>
-<iframe id="game">Loading...</iframe>
+</body>
+</html>
