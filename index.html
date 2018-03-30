@@ -1,4 +1,4 @@
-<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <style>
 html,body{overflow:hidden;-webkit-overflow-scrolling:touch;width:100vw;height:100vh;position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0);color:aquamarine;transition:background-color 1.5s ease-out;}
 html{background-color:black;}
@@ -16,7 +16,7 @@ html{background-color:black;}
 window.onload=function(){
 var rand=Math.floor(Math.random()*5);
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://flappybird.playcanvas.com":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand=4)?"https://paperplanes.world":0)))));//"/ballz/"
-document.getElementById("viewport").content="width=device-width,initial-scale="+((rand==2)?"0.5":"1.0");
+document.getElementById("game").style=(rand==2)?"transform:scale(0.5);width:200%;height:200%;":"";
 document.documentElement.style.backgroundColor="aquamarine";
 document.getElementById("bg_hills").style.bottom=0;
 document.getElementById("bg_clouds").style.top=0;
