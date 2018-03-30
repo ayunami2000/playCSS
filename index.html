@@ -1,6 +1,6 @@
-<!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
 <style>
-html{overflow:hidden;-webkit-overflow-scrolling:touch;width:100vw;height:100vh;position:absolute;top:0;left:0;right:0;bottom:0;background-color:black;color:aquamarine;transition:background-color 1.5s ease-out;}
+html,body{overflow:hidden;-webkit-overflow-scrolling:touch;width:100vw;height:100vh;position:absolute;top:0;left:0;right:0;bottom:0;background-color:black;color:aquamarine;transition:background-color 1.5s ease-out;}
 *{font-family:"Arial",sans-serif;padding:0;margin:0;border:0;}
 #bg_hills{z-index:-1;width:100%;height:25%;background-color:mediumspringgreen;position:fixed;bottom:-25%;left:0;transition:bottom 750ms ease 750ms;}
 #bg_clouds{z-index:-1;width:100%;height:9.375%;background-color:lightcyan;opacity:0.5;position:fixed;top:-9.375%;left:0;transition:top 750ms ease 1250ms;}
@@ -15,6 +15,7 @@ html{overflow:hidden;-webkit-overflow-scrolling:touch;width:100vw;height:100vh;p
 window.onload=function(){
 var rand=Math.floor(Math.random()*5);
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://flappybird.playcanvas.com":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand=4)?"https://paperplanes.world":0)))));//"/ballz/"
+document.getElementById("viewport").content="width=device-width,initial-scale="+((rand==2)?"0.5":"1.0");
 document.documentElement.style.backgroundColor="aquamarine";
 document.getElementById("bg_hills").style.bottom=0;
 document.getElementById("bg_clouds").style.top=0;
