@@ -16,6 +16,7 @@ html{background-color:black;}
 <script>
 window.onload=function(){
 var rand=Math.floor(Math.random()*5);
+this.rand=rand;
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://flappybird.playcanvas.com":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand=4)?"https://paperplanes.world":0)))));//"/ballz/"
 document.getElementById("game").style=(rand==2)?"transform:scale(0.5);width:200%;height:200%;":"";
 document.documentElement.style.backgroundColor="aquamarine";
@@ -27,6 +28,7 @@ document.getElementById("start").style.bottom="50%";
 function start(){
 document.getElementById("content").style.right="100%";
 document.getElementById("content").style.opacity="0.0";
+document.getElementById("game").style.height=(window.rand==2)?"200%":"auto";
 document.getElementById("game").style.left=0;
 document.getElementById("game").style.opacity="1.0";
 document.getElementById("game").style.overflow="auto";
