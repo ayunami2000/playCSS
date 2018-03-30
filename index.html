@@ -1,5 +1,14 @@
 <!DOCTYPE html5>
 <html>
+<body>
+<div id="bg_hills"></div>
+<div id="bg_clouds"></div>
+<div id="content">
+<div id="title">Game.rand()<br><span>Play a random web game!</span></div>
+<div id="start" onclick="start();">Start</div>
+</div>
+<iframe id="game">Loading...</iframe>
+</body>
 <head>
 <title>Game.rand() - Play a random web game!</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -40,13 +49,4 @@ document.getElementById("game").style.overflow="auto";
 };
 </script>
 </head>
-<body>
-<div id="bg_hills"></div>
-<div id="bg_clouds"></div>
-<div id="content">
-<div id="title">Game.rand()<br><span>Play a random web game!</span></div>
-<div id="start" onclick="start();">Start</div>
-</div>
-<iframe id="game">Loading...</iframe>
-</body>
 </html>
