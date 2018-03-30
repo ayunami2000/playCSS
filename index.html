@@ -29,9 +29,6 @@ html{-webkit-overflow-scrolling:auto;background-color:black;}
 </style>
 <script>
 window.setTimeout(function(){
-window.frame;
-window.frameRegister=function(frameId){window.frame=window.frames[frameId];}
-var rand=Math.floor(Math.random()*6);
 this.rand=rand;
 document.getElementById("game").src=((rand==0)?"https://www.progressivewebflap.com":((rand==1)?"https://playcanv.as/index/6VrvavHu":((rand==2)?"https://hczhcz.github.io/Another-Flappy-2048/":((rand==3)?"https://2048-opera-pwa.surge.sh/":((rand==4)?"https://paperplanes.world":((rand==5)?"/ballz/":0))))));
 document.getElementById("game").style=(rand==2)?"transform:scale(0.5);width:200%;height:200%;":((rand==4)?"height:100%;":"");
@@ -42,6 +39,8 @@ document.getElementById("title").style.top="12.5%";
 document.getElementById("start").style.bottom="50%";
 },0);
 function start(){
+window.frame;
+window.frameRegister=function(frameId){window.frame=window.frames[frameId];}
 document.body.style.overflowY="auto";
 document.body.style.backgroundColor="aquamarine";
 document.getElementById("content").style.right="100%";
@@ -51,7 +50,7 @@ document.getElementById("game").style.left=0;
 document.getElementById("game").style.opacity="1.0";
 document.getElementById("game").style.overflow="auto";
 var touchEvents=['start','move','enter','leave','cancel'];
-for(var i=0,l=touchEvents.length;i<l;i++){document.addEventListener('touch'+touchEvents[i],function(e){e.preventDefault();window.frame.document.elementFromPoint(e.pageX,e.pageY).dispatchEvent(e);}}
+for(var i=0,l=touchEvents.length;i<l;i++){document.documentElement.addEventListener('touch'+touchEvents[i],function(e){e.preventDefault();window.frame.document.elementFromPoint(e.pageX,e.pageY).dispatchEvent(e);}}
 };
 </script>
 </head>
